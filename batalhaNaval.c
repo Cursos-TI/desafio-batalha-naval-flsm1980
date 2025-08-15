@@ -37,7 +37,7 @@ int main() {
     {
         for (int i = 0; i < TAM_NAVIO; i++)
         {
-            if (tabuleiro[linhaH][colunaH + i] = VALOR_NAVIO) {
+            if (tabuleiro[linhaH][colunaH + i] != VALOR_AGUA) {
                 podeHorizontal = 0;
                 break;
             }
@@ -67,7 +67,7 @@ int main() {
     {
         for (int i = 0; i < TAM_NAVIO; i++)
         {
-           if (tabuleiro[linhaV +i][colunaV] = VALOR_NAVIO)
+           if (tabuleiro[linhaV +i][colunaV] != VALOR_AGUA)
            {
             podeVertical = 0;
             break;
