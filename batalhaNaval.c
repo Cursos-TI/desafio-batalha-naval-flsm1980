@@ -8,19 +8,20 @@ int main() {
 
     // Nível Novato - Posicionamento dos Navios
 
-    int tamanhoTabuleiro = 10;
-    // int tamanhoNavio = 3;
-    // int valorAgua = 0;
-    // int valorNavio = 3;
+    #define TAM_TABULEIRO 10
+    #define TAM_NAVIO 3
+    #define VALOR_AGUA 0
+    #define VALOR_NAVIO 3
 
     // Criação do tabuleiro vazio
 
-    int tabuleiro[10][10];
-    for (int i = 0; i < 10; i++)
+    int tabuleiro[TAM_TABULEIRO][TAM_TABULEIRO];
+
+    for (int i = 0; i < TAM_TABULEIRO; i++)
     {
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < TAM_TABULEIRO; j++)
         {
-            tabuleiro [i][j] = 0;
+            tabuleiro [i][j] = VALOR_AGUA;
         }
     }
 
@@ -32,11 +33,11 @@ int main() {
     // Verificando se o navio horizontal cabe no tabuleiro e não se sobrepõe ao outro
 
     int podeHorizontal = 1;
-    if (colunaH + 3 <= 10)
+    if (colunaH + TAM_NAVIO <= TAM_TABULEIRO)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < TAM_NAVIO; i++)
         {
-            if (tabuleiro[linhaH][colunaH + i] != 0) {
+            if (tabuleiro[linhaH][colunaH + i] = VALOR_NAVIO) {
                 podeHorizontal = 0;
                 break;
             }
@@ -49,9 +50,9 @@ int main() {
     // posicionando navio horizontal
     if (podeHorizontal)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < TAM_NAVIO; i++)
         {
-            tabuleiro[linhaH][colunaH +i] = 3;
+            tabuleiro[linhaH][colunaH +i] = VALOR_NAVIO;
         }
          
     } else{
@@ -62,11 +63,11 @@ int main() {
     // Verificação se o navio vertical cabe no tabuleiro e não sobrepõe outro
 
     int podeVertical = 1;
-    if (linhaV + 3 <= 10)
+    if (linhaV + TAM_NAVIO <= TAM_TABULEIRO)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < TAM_NAVIO; i++)
         {
-           if (tabuleiro[linhaV +i][colunaV] != 0)
+           if (tabuleiro[linhaV +i][colunaV] = VALOR_NAVIO)
            {
             podeVertical = 0;
             break;
@@ -82,9 +83,9 @@ int main() {
 
     if (podeVertical)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < TAM_NAVIO; i++)
         {
-            tabuleiro[linhaV + i][colunaV] = 3;
+            tabuleiro[linhaV + i][colunaV] = VALOR_NAVIO;
         }
         
     } else {
@@ -95,9 +96,9 @@ int main() {
     // Exibição do tabuleiro final
 
     printf("*** TABULEIRO DE BATALHA NAVAL ***\n");
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < TAM_TABULEIRO; i++)
     {
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < TAM_TABULEIRO; j++)
         {
             printf("%d  ", tabuleiro[i][j]);
         }
