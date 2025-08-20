@@ -3,15 +3,14 @@
 // Desafio Batalha Naval - MateCheck
 // Trabalho de Flávio Maia
 
+#define TAM_TABULEIRO 10
+#define TAM_NAVIO 3
+#define VALOR_AGUA 0
+#define VALOR_NAVIO 3
 
 int main() {
 
     // Nível Novato - Posicionamento dos Navios
-
-    #define TAM_TABULEIRO 10
-    #define TAM_NAVIO 3
-    #define VALOR_AGUA 0
-    #define VALOR_NAVIO 3
 
     // Criação do tabuleiro vazio
 
