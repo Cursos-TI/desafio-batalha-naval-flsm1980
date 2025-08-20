@@ -112,13 +112,13 @@ int main(){
         podeDiag1 = 0;
     }
 
-    // Posiciona navio diagonal ↘️
+    // Posiciona navio diagonal
     if (podeDiag1) {
         for (int i = 0; i < tamanho_navio; i++) {
             tabuleiro[linhaDiag1 + i][colunaDiag1 + i] = valor_navio;
         }
     } else {
-        printf("Erro ao posicionar navio diagonal ↘️.\n");
+        printf("Erro ao posicionar navio diagonal.\n");
         return 1;
     }
 
@@ -136,13 +136,13 @@ int main(){
         podeDiag2 = 0;
     }
 
-    // Posiciona navio diagonal ↙️
+    // Posiciona navio diagonal
     if (podeDiag2) {
         for (int i = 0; i < tamanho_navio; i++) {
             tabuleiro[linhaDiag2 + i][colunaDiag2 - i] = valor_navio;
         }
     } else {
-        printf("Erro ao posicionar navio diagonal ↙️.\n");
+        printf("Erro ao posicionar navio diagonal.\n");
         return 1;
     }
 
